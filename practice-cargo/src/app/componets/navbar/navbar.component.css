@@ -1,0 +1,30 @@
+/* Add a black background color to the top navigation */
+#navbar {
+    background-color: #00061C;
+    overflow: hidden;
+    font-family: 'Aclonica';font-size: 22px;
+  }
+  
+  /* Style the links inside the navigation bar */
+  #navbar a {
+    float: right;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  #navbar a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+  .navbar-toggler{
+      background-color: white;
+  }
+
+  .navbar-toggle-icon{
+      color: black;
+  }
+  
