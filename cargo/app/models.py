@@ -2,11 +2,12 @@ from django.db import models
 from django.contrib.auth.models import User
 
 class Profile(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     username=models.CharField(max_length=255)
     Id_No=models.IntegerField()
     address=models.CharField(max_length=20)
     mobile_no=models.IntegerField()
+    cargos=models.CharField(max_length=255, blank=True, null=True )
 
     def __str__(self):
         return self.user.username
@@ -44,7 +45,7 @@ class Cargo(models.Model):
     duration=models.CharField(max_length=20, choices=Duration, default='default')
     type_cargo=models.CharField(max_length=20, choices=Type, default='choose_type')
     weight_category=models.CharField(max_length=20, choices=Weight, default='weight')
-    cargo=models.ForeignKey(User, on_delete=models.CASCADE, related_name='customer')
+    cargo=models.ForeignKey(Profile, on_delete=models.CASCADE, related_name='customer')
 
 # class Prices(models.Model):
 
