@@ -10,7 +10,7 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
   styleUrls: ['./sign-in.component.css'],
 })
 export class SignInComponent implements OnInit {
-  constructor(private route: ActivatedRoute) {}
+  constructor(private Router: ActivatedRoute) {}
 
   ngOnInit(): void {}
 }
